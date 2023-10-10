@@ -1,7 +1,7 @@
 diff --git a/misc/dist/linux/org.godotengine.Godot.appdata.xml b/misc/dist/linux/org.godotengine.Godot.appdata.xml
 --- a/misc/dist/linux/org.godotengine.Godot.appdata.xml	2023-03-06 14:13:41.000000000 +0000
 +++ b/misc/dist/linux/org.godotengine.Godot.appdata.xml	2023-03-16 22:20:25.946962567 +0000
-@@ -1,36 +1,69 @@
+@@ -1,36 +1,70 @@
  <?xml version="1.0" encoding="UTF-8"?>
 -<!-- Copyright 2017-2022 Rémi Verschelde <remi@godotengine.org> -->
  <component type="desktop">
@@ -11,8 +11,8 @@ diff --git a/misc/dist/linux/org.godotengine.Godot.appdata.xml b/misc/dist/linux
 -  <name>Godot Engine</name>
 -  <summary>Multi-platform 2D and 3D game engine with a feature-rich editor</summary>
 -  ​<launchable type="desktop-id">org.godotengine.Godot.desktop</launchable>
-+  <id>org.godotengine.Godot3</id>
-+  <name>Godot 3</name>
++  <id>org.godotengine.Godot3Sharp</id>
++  <name>Godot 3 (C#/.NET)</name>
 +  <summary>Godot game engine editor</summary>
 +  <developer_name>The Godot Engine Community</developer_name>
    <description>
@@ -38,8 +38,9 @@ diff --git a/misc/dist/linux/org.godotengine.Godot.appdata.xml b/misc/dist/linux
 +    </ul>
 +    <p>Limitations of the Flatpak version:</p>
 +    <ul>
-+      <li>No C#/Mono support. See (links to Godot 4 repo): https://github.com/flathub/org.godotengine.Godot/issues/8</li>
-+      <li>External script editors are supported, but you need to follow the steps described here: https://github.com/flathub/org.godotengine.Godot3#using-an-external-script-editor</li>
++      <li>No Mono external editor support.</li>
++      <li>External script editors are still supported (for use outside of Mono), but you need to follow the steps described here: https://github.com/flathub/org.godotengine.Godot3Sharp#using-an-external-script-editor</li>
++      <li>After the first C# script is created, it is necessary to click build within Godot. Alternatively, running dotnet restore in the IDE's terminal would work as well.</li>
 +    </ul>
    </description>
 -  <screenshots>
