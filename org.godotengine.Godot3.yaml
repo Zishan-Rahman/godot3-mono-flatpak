@@ -106,8 +106,6 @@ modules:
           - export DOTNET_NOLOGO=true
           - /app/bin/godot-bin "$@"
       - type: file
-        path: org.godotengine.Godot.appdata.xml
-      - type: file
         path: nuget/nuget-source.config
       - type: file
         url: https://www.nuget.org/api/v2/package/Microsoft.Build.NoTargets/2.0.1
