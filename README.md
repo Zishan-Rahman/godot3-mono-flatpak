@@ -1,14 +1,14 @@
-# Flatpak for Godot Engine
+# Flatpak for Godot Engine 3
 
 ## Installation
 
 This Flatpak is available on
-[Flathub](https://flathub.org/apps/details/org.godotengine.Godot).
+[Flathub](https://flathub.org/apps/details/org.godotengine.Godot3).
 After following the [Flatpak setup guide](https://flatpak.org/setup/),
 you can install it by entering the following command in a terminal:
 
 ```bash
-flatpak install --user flathub org.godotengine.Godot -y
+flatpak install --user flathub org.godotengine.Godot3 -y
 ```
 
 Once the Flatpak is installed, you can run Godot using your desktop environment's
@@ -52,11 +52,11 @@ Make sure your script is executable using `chmod +x blender`. Use the directory 
 
 ## Using an external script editor
 
-This version of Godot is built with special [permissions](https://github.com/flathub/org.godotengine.Godot/blob/394f81c3310b82f5069ea917bb21f49888f818c6/org.godotengine.Godot.yaml#L46) to be able to run commands on the host system outside of the sandbox via [flatpak-spawn](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-spawn). This is done by prefixing the command with `flatpak-spawn --host`. For example, if you want to run `gnome-terminal` on the host system outside of the sandbox, you can do so by running `flatpak-spawn --host gnome-terminal`.
+This version of Godot is built with special [permissions](https://github.com/flathub/org.godotengine.Godot/blob/394f81c3310b82f5069ea917bb21f49888f818c6/org.godotengine.Godot3.yaml#L46) to be able to run commands on the host system outside of the sandbox via [flatpak-spawn](https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-spawn). This is done by prefixing the command with `flatpak-spawn --host`. For example, if you want to run `gnome-terminal` on the host system outside of the sandbox, you can do so by running `flatpak-spawn --host gnome-terminal`.
 
 To spawn an external editor in Godot, all command line arguments must be split from the commands path in the [external editor preferences](https://docs.godotengine.org/en/latest/getting_started/editor/external_editor.html) and because the command needs to be prefixed with `"flatpak-spawn --host"`, the **Exec Path** is replaced by `flatpak-spawn` and the **Exec Flags** are prefixed by `--host [command path]`.
 
-For example, for Visual Studio Code, where your [external editor preferences](https://docs.godotengine.org/en/3.2/getting_started/editor/external_editor.html) would *normally* look like this...
+For example, for Visual Studio Code, where your [external editor preferences](https://docs.godotengine.org/en/3.5/getting_started/editor/external_editor.html) would *normally* look like this...
 
 ```text
 Exec Path:  code
